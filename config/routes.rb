@@ -10,5 +10,6 @@ Rails.application.routes.draw do
     get "/ice_creams" => "ice_creams#index"
     get "/ice_creams/:id" => "ice_creams#show"
     post "/ice_creams" => "ice_creams#create"
+    patch "/ice_creams/:id" => "ice_creams#update"
   end
 end

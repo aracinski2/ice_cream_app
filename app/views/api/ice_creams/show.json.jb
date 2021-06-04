@@ -1,0 +1,5 @@
+{
+  name: @ice_cream.name,
+  flavor: @ice_cream.flavor,
+  color: @ice_cream.color,
+}

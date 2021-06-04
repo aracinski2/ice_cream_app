@@ -27,4 +27,10 @@ class Api::IceCreamsController < ApplicationController
     @ice_cream.save
     render 'show.json.jb'
   end
+
+  def destroy
+    @ice_cream = IceCream.find_by(id: params[:id])
+    @ice_cream.destroy
+    render json: {message: "Ice Cream has been removed"}
+  end
 end

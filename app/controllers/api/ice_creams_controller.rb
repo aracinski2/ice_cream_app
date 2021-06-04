@@ -8,4 +8,14 @@ class Api::IceCreamsController < ApplicationController
     @ice_cream = IceCream.find_by(id: params[:id])
     render 'show.json.jb'
   end
+
+  def create
+    @ice_cream = IceCream.new(
+      name: params[:name],
+      flavor: params[:flavor],
+      color: params[:color]
+    )
+    @ice_cream.save
+    render 'show.json.jb'
+  end
 end
